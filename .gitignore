@@ -84,3 +84,6 @@ GeneratedFiles/Debug/moc_ValueInputDlg.cpp
 x64/Debug/Database_RCS.log
 x64/Debug/vc120.pdb
 x64/Debug/Database_RCS.Build.CppClean.log
+Debug/Database_RCS.Build.CppClean.log
+Release/Database_RCS.Build.CppClean.log
+AddClassRecordDlg.ilk

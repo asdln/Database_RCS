@@ -244,6 +244,8 @@ public slots:
 
 	void slotBeforeDelete(int);
 
+	void slot3DView();
+
 protected:
 
 	void setDelegate(const QJsonObject& currentObj);

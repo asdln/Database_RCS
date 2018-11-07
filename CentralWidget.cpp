@@ -9,6 +9,7 @@
 #include <QtCore/QFile>
 #include "Document.h"
 #include "DataType.h"
+#include <QtWidgets/QMainWindow>
 
 CentralWidget::CentralWidget(QWidget *parent)
 	: QWidget(parent)
@@ -22,6 +23,8 @@ CentralWidget::CentralWidget(QWidget *parent)
 	connect(ui.pushButton_Submit, SIGNAL(clicked()), this, SLOT(slotSubmit()));
 	connect(ui.pushButton_Revert, SIGNAL(clicked()), this, SLOT(slotRevert()));
 	connect(ui.pushButton_Delete, SIGNAL(clicked()), this, SLOT(slotDelete()));
+
+	connect(ui.pushButton_3DView, SIGNAL(clicked()), this, SLOT(slot3DView()));
 }
 
 CentralWidget::~CentralWidget()
@@ -87,6 +90,12 @@ void CentralWidget::slotBeforeDelete(int nRow)
 			}
 		}
 	}
+}
+
+void CentralWidget::slot3DView()
+{
+	QMainWindow* pMainwindow = new QMainWindow;
+	pMainwindow->show();
 }
 
 void CentralWidget::slotDelete()
